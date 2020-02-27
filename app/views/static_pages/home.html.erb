@@ -1,0 +1,7 @@
+<h1>Flickr Photos</h1>
+<%= render 'form', locals: {default_value: @default_value} %>
+<% if @photos %>
+    <% @photos.each do |photo| %>
+        <%= render 'photo', locals: {photo: photo} %>
+    <% end %>
+<% end %>
